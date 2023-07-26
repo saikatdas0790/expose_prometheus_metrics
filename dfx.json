@@ -1,0 +1,26 @@
+{
+  "version": 1,
+  "canisters": {
+    "expose_prometheus_metrics_backend": {
+      "type": "rust",
+      "package": "expose_prometheus_metrics_backend",
+      "candid": "src/expose_prometheus_metrics_backend/expose_prometheus_metrics_backend.did"
+    },
+    "expose_prometheus_metrics_frontend": {
+      "type": "assets",
+      "source": [
+        "src/expose_prometheus_metrics_frontend/assets"
+      ],
+      "dependencies": [
+        "expose_prometheus_metrics_backend"
+      ]
+    }
+  },
+  "defaults": {
+    "build": {
+      "packtool": "",
+      "args": ""
+    }
+  },
+  "output_env_file": ".env"
+}
