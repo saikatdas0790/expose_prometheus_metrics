@@ -1,4 +1,2 @@
 [workspace]
-members = [
-    "src/expose_prometheus_metrics_backend",
-]
+members = ["src/backend"]
